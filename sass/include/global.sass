@@ -1,0 +1,587 @@
+*, *::before, *::after
+    box-sizing: border-box
+::root
+    font-size: 16px
+html
+    // height: 100%
+body
+    // height: calc(100vh)
+    width: 100%
+    z-index: 1
+.no-margin
+    margin: 0
+
+.no-padding
+    padding: 0
+
+.page-border-top
+    border-top: 20px solid $white
+    position: fixed
+    top: 20px
+    // bottom: 20px
+    right: 20px
+    left: 20px
+    z-index: 999
+    &:before
+        content: ''
+        border-top: 20px solid #fff
+        position: fixed
+        top: 0
+        // bottom: 0
+        right: 0
+        left: 0
+    +iphone
+        display: none
+    
+
+.page-border-bot
+    border-bottom: 20px solid $white
+    position: fixed
+    // top: 20px
+    bottom: 20px
+    right: 20px
+    left: 20px
+    z-index: 999
+    &:before
+        content: ''
+        border-bottom: 20px solid #fff
+        position: fixed
+        // top: 0
+        bottom: 0
+        right: 0
+        left: 0
+    +iphone
+        display: none
+
+.page-border-rt
+    border-right: 20px solid $white
+    position: fixed
+    top: 20px
+    bottom: 20px
+    right: 20px
+    // left: 20px
+    z-index: 999
+    &:before
+        content: ''
+        border-right: 20px solid #fff 
+        position: fixed
+        top: 0
+        bottom: 0
+        right: 0
+        // left: 0
+    +iphone
+        display: none
+
+.page-border-lt
+    border-left: 20px solid $white
+    position: fixed
+    top: 20px
+    bottom: 20px
+    // right: 20px
+    left: 20px
+    z-index: 999
+    &:before
+        content: ''
+        border-left: 20px solid #fff
+        position: fixed
+        // top: 0
+        // bottom: 0
+        // right: 0
+        // left: 0
+    +iphone
+        display: none
+
+
+.bg-logo
+    content: ''
+    background-image: url("../img/Logo_Gradient_BRP-02.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    position: fixed
+    top: 40px
+    bottom: 40px
+    right: 40px
+    left: 40px
+    z-index: 1
+    opacity: 0.04
+
+
+.container
+    width: 960px
+    margin: 0 auto
+    position: relative
+    z-index: 995
+    +ipad
+        width: 80%
+    +iphone
+        width: 300px
+        margin: 0 auto
+.container-fluid
+    width: calc(100% - 100px)
+    margin: 0 auto
+    position: relative
+    z-index: 990
+
+img
+    width: 100%
+    height: auto
+
+
+.logo-small
+    max-width: 200px
+    height: auto
+dt,dd,dl
+    padding: 0
+    margin: 0
+
+.extra-pad
+    padding: 15px
+
+
+// Flex-Controllers
+.col-center
+    display: flex
+    justify-content: center
+    align-content: center
+    align-items: center
+
+.vertical-flex
+    // display: flex
+    flex-direction: column
+
+.horizontal-flex
+    // display: flex
+    flex-direction: row
+
+.self-right, .self-bottom
+    align-self: flex-end
+
+.self-left, .self-top
+    align-self: flex-start
+
+
+
+
+// LiquidCharcoal Gradient Background
+.lc-brand
+    background: rgb(63,63,63)
+    background: $gradient
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+
+    
+    
+// Global Styles
+ul.social-link-set
+    list-style: none
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-content: center
+    padding: 0
+    margin: 0
+    li
+        width: 60px
+        height: 60px
+        position: relative
+        a
+            span
+                position: absolute
+                width: 50px
+                height: 50px
+                img
+                    visibility: hidden
+            .scl-btn-bg    
+                background-image: url(../img/svg/water_color_purple_stroke_bg.svg)
+                background-size: contain
+                background-repeat: no-repeat
+        
+            .scl-btn-icon
+                position: absolute
+                display: flex
+                justify-content: center
+                align-content: center
+                align-items: center
+                img, svg
+                    max-height: 25px
+                    max-width: 25px
+                    fill: $white
+        &:hover
+            .scl-btn-bg
+                background-image: url(../img/svg/water_color_white_stroke_bg.svg) !important
+                background-size: contain
+                background-repeat: no-repeat
+            .be-icon:hover > svg
+                fill: $behance
+            .in-icon:hover > svg
+                fill: $linkedin
+            .tw-icon:hover > svg
+                fill: $twitter
+            .fb-icon:hover > svg
+                fill: $facebook
+
+.quick-contact-box
+    position: fixed
+    // width: calc(100% - 80px)
+    width: 100%
+    left: 0px
+    right: 0px
+    bottom: 0px
+    background: rgba(#fff, 0.9)
+    z-index: 999
+    ul
+        list-style-type: none
+        padding: 0
+        margin: 0
+        flex-direction: row
+        border-top: 1px solid $black
+        border-bottom: 1px solid $black
+        z-index: 992
+        &:last-child
+            border: none
+        li
+            flex-grow: 1
+            align-self: center
+            text-align: center
+            display: flex
+            justify-content: center
+            align-content: center
+            padding: 8px 0px
+            
+            &:not(:last-child)
+                border-right: 1px solid $black
+
+        
+            a
+                img
+                    width: 16px
+                    height: auto
+                    // filter: grayscale(100%)
+    // ul.direct-contact
+    //     display: flex
+    //     list-style-type: none
+    //     padding: 0
+    //     margin: 0
+    //     flex: 1
+    //     li
+    //         flex-grow: 1
+    //         align-self: center
+    //         text-align: center
+    //         display: flex
+    //         justify-content: center
+    //         align-content: center
+    //         padding: 15px 0px
+    //         &:not(:last-child)
+    //             border-right: 1px solid $black
+    //         a
+    //             img
+    //                 max-width: 40px
+    
+
+
+.btn
+    width: 100%
+    padding: 15px
+    border-radius: 15px
+    transition: all 0.3s ease 0s
+    display: inline-block
+    text-align: center
+    text-decoration: none
+    &:hover
+        .btn
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+
+.btn-prpl
+    background-color: rgba($purple,0.6)
+    color: #fff
+    &:hover
+        transform: translateY(5px)
+        box-shadow: 0px 3px 30px rgba($purple, 1)
+        background-color: rgba($purple, 1)
+.hide
+    display: none !important
+.hide-med
+    +ipad
+        display: none !important
+.show-med
+    +ipad
+        display: block !important
+.spacer-top
+    +ipad
+        margin-top: 30px !important
+
+.spacer-bot
+    +ipad
+        margin-bottom: 30px !important
+.spacer-top-15
+    +ipad
+        margin-top: 15px !important
+
+
+// Home Page
+.home-main
+    width: calc(100% / 1.5)
+    margin: auto
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    padding-bottom: 100px
+    +iphone
+        width: 100%
+        margin: 0 auto
+    .home-page
+        align-self: center
+    .row
+        justify-content: center
+        align-content: center
+    
+.intro-text
+    font-size: 1rem
+    line-height: 2.5rem
+    .lead
+        background: #fff
+        color: $black
+        padding: 4px
+        display: inline
+        span 
+            font-weight: 700
+        +ipad
+            background: $white
+            
+// App Color Codes
+.ps-app
+    color: #00c8ff
+.ai-app
+    color: #f08a36
+.xd-app
+    color: #ff2bc2
+.sketch-app
+    color: #f4b53f
+.html-app
+    color: #e65127
+.css-app
+    color: #0c73b8
+.js-app
+    color: #e7a328
+
+
+
+// Row Positioning Home page.
+.home-main
+    .logo-main
+        margin-bottom: -65px
+        z-index: 5
+        +ipad
+            margin-bottom: 0
+            margin: 0 auto
+        img
+            +ipad
+                width: 280px
+                // margin: 0 auto
+                margin-bottom: -60px
+            +iphone
+                width: 200px
+                margin-bottom: 0px
+    .intro-text
+        margin-top: -200px
+        +ipad
+            margin-top: -50px
+        +iphone
+            margin-top: 0
+    .selfie-row
+        .row
+            +ipad
+                justify-content: flex-end
+        figure
+            +ipad
+                width: 80%
+                height: auto
+                align-self: flex-end
+            +iphone
+                width: 200px
+                align-self: center
+    ul.social-link
+        +ipad
+            position: absolute
+            bottom: -100px
+
+
+
+
+// About-Page
+.about-content
+    margin-bottom: 50px
+    position: relative
+    +ipad
+        padding-bottom: 100px
+.im-fancy-box
+    margin-top: -50px
+    +iphone
+        margin-top: 100px
+    .skills-text
+        font-size: 1.5rem
+        width: 100%
+        letter-spacing: 2px
+        +iphone
+            font-size: 1.3rem
+
+
+.about-content
+    .awesome-title
+        // margin-top: -30px
+    .logo-about
+        display: block
+        max-width: 200px
+    .text-rotate
+        text-transform: capitalize
+    .about-text
+        br
+            display: block
+            margin-top: 1rem
+            content: ''
+
+
+// Resume Page
+.resume-main
+    padding-bottom: 50px
+    +ipad
+        padding-bottom: 200px
+    .resume-page
+        padding-bottom: 50px
+        .contact-data
+            padding: 0
+            margin: 0
+            list-style: none
+            margin-bottom: 15px
+            h6
+                font-weight: normal
+                padding: 0
+                margin: 0 
+                a
+                    color: $black
+                    text-decoration: none
+
+        .tech-list
+            ul
+                list-style: none
+                justify-content: space-between
+                padding: 0
+                +ipad
+                    justify-content: flex-start
+            
+        .education-line, .skills-set
+            h4
+                margin: 0
+                padding: 0       
+        .skills-set
+            dl
+                padding-right: 20px
+                dt
+                    margin-bottom: 20px
+                dd
+                    margin-bottom: 10px
+                    &:last-child
+                        margin-bottom: 0
+        .education-line
+            ul.social-link-set
+                justify-content: flex-start !important
+        .resume-contact
+            margin-top: 1.8rem
+            .rsm-btn
+                width: 300px
+                margin-top: 10px
+            
+// Portfolio Page
+
+
+.port-logo
+    width: 300px
+    margin: 0 auto
+    margin-bottom: 30px
+    +iphone
+        width: 230px
+        margin: 0 auto
+        padding: 20px
+        text-align: center
+
+.portfolio-page
+    .portfolio-main
+        .eb-container
+            +iphone
+                width: 250px
+                margin: 0 auto
+
+
+// Contact-LC page
+.contact-lc-page
+    .contact-lc-main
+        padding-bottom: 50px
+.title-contact-lc
+    margin: 80px 0px 50px 0px
+    justify-content: center
+    align-content: center
+    div
+        align-self: center
+        margin-right: 3rem
+        font-size: 2rem
+        font-weight: 900
+        letter-spacing: 3px
+        &:last-child
+            margin-right: 0px
+        +iphone
+            margin-right: 1rem
+            font-size: 1rem
+
+    .logo-img
+        img
+            width: 200px
+            +iphone
+                width: 90px
+
+
+.contact-lc-form
+    justify-content: space-between
+    .field-group
+        flex-direction: column
+        margin-bottom: 15px
+        padding: 0px 15px
+        +iphone
+            padding: 0
+        label
+            margin-bottom: 10px
+        input
+            height: 2.2rem
+            border: 2px solid $green
+            box-shadow: 0px 1px 5px rgba($green, 1)
+        textarea
+            border: 2px solid $purple
+            box-shadow: 0px 1px 5px rgba($purple, 1)
+        &:third-child
+            margin-left: 50px !important
+
+    .send-btn
+        justify-content: center
+        align-content: center
+        margin-top: 20px
+        input
+            max-width: 280px
+            background-color: $green
+            color: $black
+            font-size: 1.2rem
+            font-weight: 900
+            border: 1px solid $black
+            box-shadow: none
+        .btn
+            padding: 10px
+
+            
+
+        

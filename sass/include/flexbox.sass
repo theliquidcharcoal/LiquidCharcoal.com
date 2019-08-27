@@ -1,0 +1,72 @@
+// SASS imports
+@import flexbox-mixin.sass
+
+.flex-parent
+	+flexbox
+
+.flex-child
+	+flex(1, 1, auto)
+
+.flex-none
+	+flex-none
+
+.flex-wrap
+	+flex-wrap(wrap)
+
+.flex-vertical
+	+flex-direction(column)
+
+// Flex align items
+.flex-align-items-center
+	+align-items(center)
+
+.flex-align-items-stretch
+	+align-items(stretch)
+
+.flex-align-items-start
+	+align-items(flex-start)
+
+.flex-align-items-end
+	+align-items(flex-end)
+
+// Flex justify content
+.flex-justify-center
+	+justify-content(center)
+
+.flex-justify-start
+	+justify-content(flex-start)
+
+.flex-justify-end
+	+justify-content(flex-end)
+
+.flex-justify-space-between
+	+justify-content(space-between)
+
+.flex-justify-space-around
+	+justify-content(space-around)
+
+//Flex align content
+.flex-align-content-center
+	+align-content(center)
+
+.flex-align-content-stretch
+	+align-content(stretch)
+
+.flex-align-content-start
+	+align-content(flex-start)
+
+.flex-align-content-end
+	+align-content(flex-end)
+
+//Flex align self
+.flex-self
+	+align-self
+
+.flex-self-start
+	+align-self(flex-start)
+
+.flex-self-end
+	+align-self(flex-end)
+
+.flex-self-center
+	+align-self(center)

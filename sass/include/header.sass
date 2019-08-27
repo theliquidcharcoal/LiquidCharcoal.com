@@ -1,0 +1,118 @@
+header
+    position: relative
+    background: transparent
+    text-align: left
+    line-height: 1
+    letter-spacing: 2px
+    font-weight: 700
+    margin: 80px 0px 40px 0px
+    +iphone
+        margin-top: 20px
+    nav 
+        // margin-top: 2rem
+        transform: scale(1,0)
+        transform-origin: top
+        transition: transform 400ms ease-in-out
+        ul
+            margin: 0
+            list-style: none
+            padding: 0
+            +iphone
+                margin: 30px 0 0 30px
+            // background: #000
+            li
+                margin-bottom: 1rem
+                margin-left: 1rem
+                a
+                    color: $black
+                    text-decoration: none
+                    text-transform: capitalize
+                    opacity: 0
+                    transition: opacity 150ms ease-in-out
+                    &:hover
+                        color: $red
+                    &.active
+                        background: rgb(63,63,63)
+                        background: $gradient
+                        background-clip: text
+                        -webkit-background-clip: text
+                        color: transparent
+                    
+    .nav-toggle
+        display: none
+    .nav-toggle-label
+
+        // display: flex
+        // align-items: center
+        // justify-content: center
+        display: block
+        position: fixed
+        top: 20px
+        right: 30px
+        height: 50px
+        width: 50px
+        z-index: 998
+        &:hover
+            cursor: pointer
+        
+        span, span::before, span::after
+            width: 2rem
+            height: 2px
+            border-radius: 2px
+            background: $black
+            position: absolute
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8)
+            // z-index: 998
+        span::before, span::after
+            content: ''
+            // position: absolute
+        span::before
+            top: 7px
+        span::after
+            top: 14px
+    
+    nav
+        +iphone
+            // display: none
+            transform: scale(0,0)
+            transition: all 250ms ease-out-in 350ms
+            position: fixed
+            height: 100%
+            width: 100%
+            background: white
+            z-index: 997
+            top: 0
+            left: 0
+
+    .nav-toggle:checked ~ nav
+        // display: block
+        transform: scale(1,1)
+        a
+            opacity: 1
+            transition: opacity 375 ms ease-in-out 375ms
+    
+.nav-toggle:checked ~ .ham
+    transform: rotate(45deg) !important
+
+
+@media screen
+    @media (min-width: 768px )
+        header
+            .nav-toggle-label
+                display: none
+            nav
+                transform: none
+                display: flex
+                flex-direction: row
+                background: none
+                justify-content: center
+                ul
+                    width: calc(100% / 1.5)
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    li
+                        display: inline-block
+                        margin: 0
+                        a
+                            opacity: 1

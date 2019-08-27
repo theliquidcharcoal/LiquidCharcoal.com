@@ -1,0 +1,47 @@
+            .frame {
+                position: fixed;
+                border: 2rem solid #f1f1f1;
+                top: 20px;
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .c-soon.container {
+                width: 640px;
+            }
+            
+            .c-soon figure {
+                width: 80%;
+                margin: 0 auto;
+            }
+            
+            .c-soon figure img {
+                width: 100%;
+                height: auto;
+            }
+            
+            .c-soon-text {
+                font-size: 2rem;
+            }
+            
+            @media only screen and (max-width: 480px) {
+                .c-soon.container {
+                    width: 320px;
+                }
+                .c-soon figure {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                .c-soon figure img {
+                    width: 100%;
+                    height: auto;
+                }
+                .c-soon-text {
+                    padding: 0 15px;
+                    font-size: 1rem;
+                }
+            }

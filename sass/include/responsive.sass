@@ -1,0 +1,114 @@
+// Screen size variables
+$screen-xs-min: 425px
+
+// Tiny phones
+$screen-sm-min: 576px
+
+// Small tablets and large smartphones (landscape view)
+$screen-md-min: 768px
+
+// Small tablets (portrait view)
+$screen-lg-min: 992px
+
+// Tablets and small desktops
+$screen-xl-min: 1200px
+
+// Device Specifics
+// iPad Air
+$screen-ipad-air-min: 768px
+$screen-ipad-air-max: 1024px
+
+
+// iPhone 6+/7+/8+
+$screen-iPhone-Plus-min: 414px
+$screen-iPhone-Plus-max: 736px
+ 
+// iPhone 6/6s/7/8
+$screen-iPhone-reg-min: 375px
+$screen-iPhone-reg-max: 667px
+
+// iPhone X
+$screen-iPhone-X-min: 375px
+$screen-iPhone-X-max: 871px
+
+// iPhone SE
+$screen-iPhone-SE-min: 320px
+$screen-iPhone-SE-max: 375px
+
+// Google Pixel 2
+$screen-gg-pixel-min: 411px
+$screen-gg-pixel-max: 731px
+
+// Google Pixel 2 Plus
+$screen-gg-pixel-xl-min: 411px
+$screen-gg-pixel-xl-max: 823px
+
+// Device Variables
+// $screen-ipad-air: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default
+
+
+
+// iPad 
+
+
+// Mixins
+=xs
+  @media (min-width: #{$screen-xs-min})
+    @content
+
+// Tiny devices
+=sm
+  @media (max-width: #{$screen-sm-min})
+    @content
+
+// Small devices
+=md
+  @media (min-width: #{$screen-md-min})
+    @content
+
+// Medium devices
+=lg
+  @media (min-width: #{$screen-lg-min})
+    @content
+
+// Large devices
+=xl
+  @media (min-width: #{$screen-xl-min})
+    @content
+
+// iPadPro
+=ipadpro
+    @media (max-width: #{$screen-ipad-air-max})
+        @content
+
+// iPad original
+=ipad
+    @media (max-width: #{$screen-ipad-air-min})
+        @content
+
+// iPhone SE
+=iphone
+    @media (max-width: #{$screen-iPhone-Plus-min})
+        @content
+// Extra large devices
+
+// .sample-padding-class
+//   +sm
+//     576px window width and more
+//     padding-bottom: 100%
+//     color: #000
+
+//   +md
+//     768px window width and more
+//     padding-bottom: 50%
+
+//   +lg
+//     992px window width and more
+//     padding-bottom: 10%
+
+//   +xl
+//     1200px window width and more
+//     padding-top: 20%
+//     padding-bottom: 0
+//     color: #1337cc
+
